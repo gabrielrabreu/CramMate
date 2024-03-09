@@ -8,7 +8,7 @@ def run():
     settings.convert_extension = "html"
     settings.convert_mode = "practice_test"
 
-    source = Path("C:\\Development\\Projects\\crampy\\downloads\\model.json")
+    source = Path("C:\\Development\\CramPy\\files\\matematica_facil.json")
 
     Transformer(settings).transform(source)
 

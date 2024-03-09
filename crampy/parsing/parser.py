@@ -1,6 +1,6 @@
 from typing import Type
 
-from modeling import QuizModel
+from ..modeling import QuizModel
 from .parsers import BaseParser, JsonParser
 
 

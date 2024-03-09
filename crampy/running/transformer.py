@@ -1,6 +1,5 @@
 from pathlib import Path
 
-from utils import is_pathlike
 from .settings import Settings
 from ..modeling import QuizModel
 from ..converting import Converter
@@ -23,7 +22,7 @@ class Transformer:
 
     def _output(self, path: Path, quiz_model: QuizModel) -> None:
         data = Converter().convert(self.settings.convert_mode, quiz_model, self.settings.convert_extension)
-        destination = f"{path.parent}\\{quiz_model.area}_{quiz_model.name}.{self.settings.convert_extension}"
+        destination = f"{path.parent}\\output\\{quiz_model.area}_{quiz_model.name}.{self.settings.convert_extension}"
         with SourceWriter(destination) as writer:
             writer.write(data)
 
